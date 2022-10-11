@@ -1,0 +1,73 @@
+Source: libmikmod
+Maintainer: Stephen Kitt <skitt@debian.org>
+Section: libs
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libasound2-dev [linux-any],
+               libopenal-dev,
+               libpulse-dev,
+               libsdl2-dev,
+               texinfo
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/mod-player-team/libmikmod
+Vcs-Git: https://salsa.debian.org/mod-player-team/libmikmod.git
+Homepage: http://mikmod.sf.net/
+Rules-Requires-Root: no
+
+Package: libmikmod-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: libc6-dev,
+         libmikmod3 (= ${binary:Version}),
+         ${misc:Depends}
+Breaks: libmikmod-config (<< 3.3.11.1-5)
+Replaces: libmikmod-config (<< 3.3.11.1-5)
+Description: Portable sound library - development files
+ This library is capable of playing samples as well as module files
+ and was originally written by Jean-Paul Mikkers (MikMak) for DOS. It
+ has subsequently been hacked by many hands and now runs on many Unix
+ flavours.
+ .
+ It supports OSS, ALSA, SDL and PulseAudio outputs, and can also write
+ to disk in raw, WAV and AIFF formats.
+ .
+ Supported file formats include mod, stm, s3m, mtm, xm, and it.
+ .
+ This package contains the symlinks, headers, and object files needed
+ to compile and link programs which use libmikmod.
+
+Package: libmikmod-config
+Architecture: all
+Multi-Arch: foreign
+Section: oldlibs
+Depends: libmikmod-dev (>= ${binary:Version}), ${misc:Depends}
+Description: Portable sound library - transitional package
+ This library is capable of playing samples as well as module files
+ and was originally written by Jean-Paul Mikkers (MikMak) for DOS. It
+ has subsequently been hacked by many hands and now runs on many Unix
+ flavours.
+ .
+ It supports OSS, ALSA, SDL and PulseAudio outputs, and can also write
+ to disk in raw, WAV and AIFF formats.
+ .
+ Supported file formats include mod, stm, s3m, mtm, xm, and it.
+ .
+ This package used to contain libmikmod-config.
+
+Package: libmikmod3
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Portable sound library
+ This library is capable of playing samples as well as module files
+ and was originally written by Jean-Paul Mikkers (MikMak) for DOS. It
+ has subsequently been hacked by many hands and now runs on many Unix
+ flavours.
+ .
+ It supports OSS, ALSA, SDL and PulseAudio outputs, and can also write
+ to disk in raw, WAV and AIFF formats.
+ .
+ Supported file formats include mod, stm, s3m, mtm, xm, and it.

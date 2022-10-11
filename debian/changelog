@@ -1,0 +1,547 @@
+libmikmod (3.3.11.1-6) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Stephen Kitt <skitt@debian.org>  Thu, 19 May 2022 10:18:46 +0800
+
+libmikmod (3.3.11.1-6) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository.
+
+  [ Stephen Kitt ]
+  * Bump debian/watch version.
+  * Standards-Version 4.5.1, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 11 Jan 2021 16:04:50 +0100
+
+libmikmod (3.3.11.1-5) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+
+  [ Stephen Kitt ]
+  * Set “Rules-Requires-Root: no”.
+  * Add Build-Depends-Package entry to the symbols file.
+  * Install manpages, info files, and autoconf m4 macros from the
+    installation locations instead of the source tree, to simplify
+    dh_missing tracking.
+  * Merge libmikmod-config back into libmikmod-dev, since the eponymous
+    script is no longer arch-dependent.
+  * Drop references to libmikmod2-dev, long obsolete.
+  * Switch to debhelper compatibility level 13.
+  * Standards-Version 4.5.0, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 22 Jun 2020 21:14:23 +0200
+
+libmikmod (3.3.11.1-4) unstable; urgency=medium
+
+  * Migrate to Salsa.
+  * Install examples in libmikmod-dev.
+  * Switch to debhelper compatibility level 11.
+  * Standards-Version 4.1.4, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Wed, 09 May 2018 13:31:33 +0200
+
+libmikmod (3.3.11.1-3) unstable; urgency=medium
+
+  * Fix libmikmod-config so it doesn’t require all the build-dependent
+    libraries, just -lmikmod (closes: #879706).
+
+ -- Stephen Kitt <skitt@debian.org>  Wed, 25 Oct 2017 13:32:20 +0200
+
+libmikmod (3.3.11.1-2) unstable; urgency=medium
+
+  * Build with SDL2, which involves switching from cmake back to autotools
+    since the cmake build doesn’t support SDL2 (closes: #870024).
+  * Standard-Version 4.1.1, no change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Fri, 20 Oct 2017 21:21:10 +0200
+
+libmikmod (3.3.11.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Correctly replace the version number in libmikmod-config’s manpage.
+  * Switch to debhelper compatibility level 10.
+  * Switch to https URL for the debian/copyright format.
+  * Standards-Version 4.0.0, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 03 Jul 2017 13:34:40 +0200
+
+libmikmod (3.3.11-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 19 Jun 2017 21:39:54 +0200
+
+libmikmod (3.3.10-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 04 Sep 2016 23:15:36 +0200
+
+libmikmod (3.3.9-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Switch to https: VCS URIs (see #810378).
+  * Clean up debian/control using cme.
+  * Standards-Version 3.9.8, no change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 22 Aug 2016 22:46:52 +0200
+
+libmikmod (3.3.8-2) unstable; urgency=medium
+
+  * Rebuild to get debug packages (closes: #785584).
+  * Rework debian/copyright in machine-readable format.
+  * Drop obsolete lintian source overrides.
+
+ -- Stephen Kitt <skitt@debian.org>  Sat, 02 Jan 2016 14:45:48 +0100
+
+libmikmod (3.3.8-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Standards-Version 3.9.6, no change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 15 Nov 2015 20:51:45 +0100
+
+libmikmod (3.3.7-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 07 Sep 2014 13:57:23 +0200
+
+libmikmod (3.3.6-4) unstable; urgency=medium
+
+  * We no longer need to forcibly remove configure.ac.
+  * Break and replace libmikmod2-dev (closes: #755920). Thanks to Sylvain
+    Boilard for noticing!
+
+ -- Stephen Kitt <skitt@debian.org>  Thu, 24 Jul 2014 19:18:07 +0200
+
+libmikmod (3.3.6-3) unstable; urgency=medium
+
+  * Use CMake correctly to install everything in the right place; thanks
+    to Gert Wollny and Daniel Lintott for the instructions!
+  * Drop EsounD support since it is now obsolete in Debian (closes:
+    #753123). Thanks to Adrian Bunk for the prodding!
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 29 Jun 2014 21:03:25 +0200
+
+libmikmod (3.3.6-2) unstable; urgency=medium
+
+  * Add collab-maint repository URIs.
+  * Install libmikmod.pc.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 14 Apr 2014 22:51:48 +0200
+
+libmikmod (3.3.6-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Update patches:
+    - drop 0002-dlopen-libesd.so.0-rather-than-libesd.so.patch, handled
+      upstream;
+    - refresh
+      0014-playercode-mdreg-Register-the-NULL-driver-before-the.patch.
+  * Move libmikmod-config to its own package (closes: #735206).
+
+ -- Stephen Kitt <skitt@debian.org>  Sat, 12 Apr 2014 17:08:08 +0200
+
+libmikmod (3.3.5-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 18 Mar 2014 23:13:03 +0100
+
+libmikmod (3.3.5-2) experimental; urgency=medium
+
+  * Make libmikmod-dev provide libmikmod2-dev, to make the transition
+    easier.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 17 Mar 2014 00:04:01 +0100
+
+libmikmod (3.3.5-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Update patches:
+    - refresh
+      0014-playercode-mdreg-Register-the-NULL-driver-before-the.patch;
+    - drop 0015-fix-texinfo-infox-after-info-error.patch, merged
+      upstream.
+  * Enable pulseaudio support.
+  * Only build-depend on libasound2-dev on Linux platforms.
+  * Update description and stop suggesting compatibility packages, now
+    that libmikmod supports modern sound output.
+
+ -- Stephen Kitt <skitt@debian.org>  Sun, 12 Jan 2014 20:02:14 +0100
+
+libmikmod (3.3.4-2) experimental; urgency=medium
+
+  * Forcibly disable ALSA on non-Linux platforms.
+
+ -- Stephen Kitt <skitt@debian.org>  Mon, 16 Dec 2013 23:41:36 +0100
+
+libmikmod (3.3.4-1) experimental; urgency=low
+
+  * New maintainer (closes: #728593).
+  * New upstream version (closes: #672697), with a new soname: libmikmod2
+    becomes libmikmod3.
+  * Upload to experimental to prepare the library transition.
+  * Ship the -dev package as libmikmod-dev.
+  * Update patches:
+    - drop 0001-Drop-LIBOBJS-from-configure.in.patch, obsolete
+    - drop 0003-Use-_LP64-to-detect-64bit-arches.patch, integrated
+      upstream
+    - drop 0004-CVE-2009-0179.patch, integrated upstream
+    - drop 0005-CVE-2007-6720.patch, integrated upstream
+    - drop 0006-CVE-2009-3995f.patch, fixed in another way upstream
+    - drop 0007-CVE-2010-2546.patch, integrated upstream
+    - drop 0008-Fix-libmikmod-Makefile.in.patch, obsolete
+    - drop 0009-libmikmod-Makefile.in-Respect-CPPFLAGS-and-LDFLAGS.patch,
+      obsolete
+    - drop 0010-libmikmod-config-manual-page-fix.patch, integrated
+      upstream
+    - drop 0011-Disable-ALSA-by-default.patch, obsolete
+    - drop 0012-fix-ESD.patch, integrated upstream
+    - drop 0013-fix-building-of-ESD.patch, obsolete
+    - update
+      0014-playercode-mdreg-Register-the-NULL-driver-before-the.patch
+    - add 0015-fix-texinfo-infox-after-info-error.patch to fix build
+      errors with texinfo 5.
+  * Add symbols file.
+  * Force cmake usage as recommended upstream:
+    - delete configure.ac;
+    - stop using dh-autoreconf;
+    - manually move the appropriate files to multi-arch locations;
+    - manually install the libmikmod-config manpage;
+    - forcibly disable RPATH.
+  * Enable ALSA, OpenAL and SDL audio outputs.
+  * Add watch file.
+  * Drop the VCS URIs for now.
+  * Standards-Version 3.9.5, no further change required.
+
+ -- Stephen Kitt <skitt@debian.org>  Tue, 10 Dec 2013 01:11:56 +0100
+
+libmikmod (3.1.12-5) unstable; urgency=low
+
+  * Acknowledge the NMU, thanks Simon!
+  * Make the nosound driver have higher priority than the disk
+    writers. (Closes: #690943)
+  * Demote the pulseaudio-esound-compat | oss-compat recommendation to
+    Suggests, now that the fallback is not the disk writer.
+    (Closes: #696013)
+  * Build with hardening=-fortify, as enabling fortification breaks the
+    driver loading.
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Fri, 21 Dec 2012 16:41:15 +0100
+
+libmikmod (3.1.12-4.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Apply patches from Hans de Goede and Pantelis Koukousoulas to enable
+    the ESD driver, so we can interoperate with PulseAudio (Closes: #385844)
+  * Recommend pulseaudio-esound-compat | oss-compat because if we don't have
+    one of those, the fallback path is to write output to ./music.raw, which
+    is unlikely to be what you want!
+
+ -- Simon McVittie <smcv@debian.org>  Fri, 19 Oct 2012 09:12:08 +0100
+
+libmikmod (3.1.12-4) unstable; urgency=low
+
+  * Drop the dependency on oss-compat. Programs that use libmikmod should
+    recommend it instead. (Closes: #647686)
+  * Bump Standards-Version to 3.9.3, no changes necessary.
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Thu, 05 Apr 2012 18:24:47 +0200
+
+libmikmod (3.1.12-3) unstable; urgency=low
+
+  * Build with hardened build flags. Based on a patch by Moritz
+    Muehlenhoff <jmm@debian.org>. (Closes: #656779)
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Thu, 09 Feb 2012 10:10:59 +0100
+
+libmikmod (3.1.12-2) unstable; urgency=low
+
+  * Transition to Multi-Arch and dh9, thanks to Vagrant Cascadian
+    <vagrant@debian.org> and Steve Langasek <steve.langasek@canonical.com>.
+    (Closes: #650996)
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Tue, 06 Dec 2011 10:33:37 +0100
+
+libmikmod (3.1.12-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #533558)
+    + Drop the 3.1.11-a patch, it's included upstream.
+    + Modules with more then 255 orders are now supported.
+      (Closes: #374217)
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Mon, 31 Oct 2011 21:23:56 +0100
+
+libmikmod (3.1.11-8) unstable; urgency=low
+
+  * New maintainer  (Closes: #628162).
+  * Updated to use short-form dh(7).
+  * Switch to format: 3.0 (quilt).
+  * Use dh-autoreconf to freshen the autotools stuff. (Closes: #536000)
+  * Add lintian overrides (with comments), to silence false alarms.
+  * Include the upstream README under /usr/share/doc/libmikmod2, as this
+    is where driver options are documented. (Closes: #423027)
+  * Disable the esd driver. (Closes: #123150)
+  * Depend on oss-compat, to be able to assume an OSS compatible /dev/dsp.
+    (Closes: #385844). This is done on Linux too, because the ALSA driver
+    is broken too.
+
+ -- Gergely Nagy <algernon@madhouse-project.org>  Sat, 29 Oct 2011 16:36:31 +0200
+
+libmikmod (3.1.11-7) unstable; urgency=low
+
+  * QA upload.
+  * The package has been orphaned, set the mainatainer to Debian QA.
+  * Stop shipping la file altogether.
+  * Bump debhelper compat to 8, and clean up the packaging a bit.
+
+ -- Regis Boudin <regis@debian.org>  Mon, 03 Oct 2011 19:34:56 +0100
+
+libmikmod (3.1.11-6.4) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fixed regression introduced by CVE-2007-6720.patch
+    (Closes: #631009)(LP: #194916)
+
+ -- Giuseppe Iuculano <iuculano@debian.org>  Mon, 01 Aug 2011 11:51:59 +0200
+
+libmikmod (3.1.11-6.3) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Upstream fix for CVE-2009-3995 was incorrect, this is CVE-2010-2546
+    (Closes: #575742)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Thu, 29 Jul 2010 21:16:34 -0400
+
+libmikmod (3.1.11-6.2) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * debian/patches/CVE-2009-3995f.patch: fixes buffer overflows in the
+    loaders for Impulse Tracker and Ultratracker files. (Closes: #575742)
+
+ -- Arne Wichmann <aw@linux.de>  Sat, 12 Jun 2010 16:14:44 +0200
+
+libmikmod (3.1.11-6.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * debian/patches/CVE-2007-6720.patch: Fixed application crash or abort when
+    loading/playing multiple music files with varying number of channels.
+    (CVE-2007-6720) (Closes: #461519)
+  * debian/patches/CVE-2009-0179.patch: Fixed application crash when loading XM
+    files. (CVE-2009-0179) (Closes: #476339)
+
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Wed, 05 Aug 2009 11:50:25 +0200
+
+libmikmod (3.1.11-6) unstable; urgency=medium
+
+  * The "Play a .mod on your ia64 today!" release.
+  * Module playback seems to be broken on ia64, too, but nobody noticed.
+    Checking for defined(_LP64) as suggested in #272457 which _should_
+    catch all 64bit archs.
+  * Urgency medium because ia64 will be released with sarge.
+
+ -- Ingo Saitz <ingo@debian.org>  Fri, 24 Sep 2004 14:43:15 +0200
+
+libmikmod (3.1.11-5) unstable; urgency=low
+
+  * Rebuild autotools files to fix FTBFS on GNU/k*BSD. (Closes: #263527)
+  * Use dh_installman instead of obsoleted dh_installmanpages.
+
+ -- Ingo Saitz <ingo@debian.org>  Tue, 10 Aug 2004 20:16:40 +0200
+
+libmikmod (3.1.11-4) unstable; urgency=low
+
+  * Correct -dev dependency.
+
+ -- Ingo Saitz <ingo@debian.org>  Fri,  9 Jul 2004 00:40:33 +0200
+
+libmikmod (3.1.11-3) unstable; urgency=low
+
+  * Applied upstream patch 3.1.11-a which fixes automake warnings and
+    ought to fix amd64 arch.
+  * Also modified debian/rules to add the -a to the binary packages
+    only, so no new .tar.gz is required.
+  * Added some more checks for amd64 arch, thanks to Hans-Frieder Vogt
+    to point it out.
+  * Added missing build-dep on texinfo, since the upstream patch touches
+    mikmod.texi and triggers a rebuild of mikmod.info.
+
+ -- Ingo Saitz <ingo@debian.org>  Thu,  8 Jul 2004 14:59:28 +0200
+
+libmikmod (3.1.11-2) unstable; urgency=low
+
+  * Fix override disparity: set Section: libdevel für the -dev package.
+
+ -- Ingo Saitz <ingo@debian.org>  Fri, 27 Feb 2004 20:23:57 +0100
+
+libmikmod (3.1.11-1) unstable; urgency=low
+
+  * New upstream version from Raphael Assenat.
+    + New upstream maintainer
+    + Includes almost all patches from the previous debian version
+    + More small bugfixes (MODs with length >128 and raw output driver)
+    + win32 Makefiles and DirectSound fixes (not checked ;)
+  * Package complies to debian policy 3.6.1: no changes.
+  * dump config.log when configure fails.
+
+ -- Ingo Saitz <ingo@debian.org>  Fri, 27 Feb 2004 15:07:53 +0100
+
+libmikmod (3.1.10-5) unstable; urgency=low
+
+  * Fix package description (lintian).
+
+ -- Ingo Saitz <ingo@debian.org>  Thu, 23 Jan 2003 17:08:10 +0100
+
+libmikmod (3.1.10-4) unstable; urgency=low
+
+  * Debian Policy 3.5.8: Adapt to new DEB_BUILD_OPTIONS.
+  * Open libesd by its soname (Closes: #163938).
+  * Old bug: libmikmod is already in the correct section, (Closes: #83945).
+
+ -- Ingo Saitz <ingo@debian.org>  Wed, 22 Jan 2003 18:09:48 +0100
+
+libmikmod (3.1.10-3) unstable; urgency=low
+
+  * Received patch from upstream to solve broken fades for IT
+    (Closes: #133998).
+
+ -- Ingo Saitz <ingo@debian.org>  Sat, 16 Mar 2002 16:23:52 +0100
+
+libmikmod (3.1.10-2) unstable; urgency=low
+
+  * Fix -pthread recognization. Despite gcc simply ignoring unknown switches
+    it also overoptimizes the test programm which really should not link in
+    that case (Closes: #128779).
+  * Also check for the devfs names of the oss driver. This allowes users to
+    use libmikmod without running devfsd (Closes: #106168).
+
+ -- Ingo Saitz <ingo@debian.org>  Mon,  4 Feb 2002 00:40:55 +0100
+
+libmikmod (3.1.10-1) unstable; urgency=low
+
+  * New upstream version.
+  * mikmod Homepage moved to a new location.
+  * Also changed copyright to include the bits about sox' sourcecode.
+  * Still need patches to the build-system, upstream probably will include
+    them in 3.1.11.
+  * Debian Policy 3.5.6: no changes.
+
+ -- Ingo Saitz <ingo@debian.org>  Tue, 29 Jan 2002 13:26:40 +0100
+
+libmikmod (3.1.9-6) unstable; urgency=low
+
+  * Update libtool to build on The Hurd (Closes: #105881)
+  * Update config.{sub,guess} in debian/rules now
+  * Debian Policy 3.5.5: no changes
+
+ -- Ingo Saitz <ingo@debian.org>  Fri, 20 Jul 2001 23:38:33 +0200
+
+libmikmod (3.1.9-5) unstable; urgency=low
+
+  * Update autoconf files to recognize PA-RISC architecture (Closes #96733).
+  * Update homepage URL in copyright file.
+  * Tighten dependency in -dev package to the current version of libmikmod2.
+
+ -- Ingo Saitz <ingo@debian.org>  Thu, 10 May 2001 18:10:08 +0200
+
+libmikmod (3.1.9-4) unstable; urgency=low
+
+  * New maintainer (Closes: #68118)
+  * Apply patch to fix some playback problems from upstream:
+    debian/patches/loader_mod.patch
+  * Patch mdriver.c not to register invalid MDRIVER structures:
+    debian/patches/mdriver_c.patch (forwarded to upstream) (Closes: #79425)
+  * Also removed Build-Depends on libasound1-dev, since libmikmod does
+    not support ALSA 0.5 currently (this caused the above bug to happen)
+  * Changed configure to check for /dev/dsp instead /dev/sndstat for OSS
+    presence. Fixes building on 2.4 kernels/ALSA with OSS emulation enabled:
+    debian/patches/configure_oss.patch
+  * Restructures debian/ regarding the installation of the documentation
+    (Closes: #84051)
+  * Added versioned build depends on debhelper (>> 2.2.11)
+  * Bumped Standards-Version to 3.2.1.
+
+ -- Ingo Saitz <ingo@debian.org>  Fri, 23 Feb 2001 15:22:34 +0100
+
+libmikmod (3.1.9-3) unstable; urgency=low
+
+  * build dep for libasound1-dev only on archs having it. (Closes #79407)
+
+ -- Joseph Carter <knghtbrd@debian.org>  Tue, 12 Dec 2000 09:26:25 -0500
+
+libmikmod (3.1.9-2) unstable; urgency=low
+
+  * Oops, while I'm at it, may as well supply build deps..
+
+ -- Joseph Carter <knghtbrd@debian.org>  Sat,  9 Dec 2000 15:07:20 -0500
+
+libmikmod (3.1.9-1) unstable; urgency=low
+
+  * New upstream version (Closes: #62506)
+  * Package is now in section sound (Closes: #64781)
+
+ -- Joseph Carter <knghtbrd@debian.org>  Sat,  9 Dec 2000 14:42:59 -0500
+
+libmikmod (3.1.7-4) unstable; urgency=low
+
+  * Applied upstream -c patch
+
+ -- Joseph Carter <knghtbrd@debian.org>  Thu,  5 Aug 1999 06:36:47 -0700
+
+libmikmod (3.1.7-3) unstable; urgency=HIGH
+
+  * Corrected BAD boo-boo in control file (Closes: #42071)
+
+ -- Joseph Carter <knghtbrd@debian.org>  Wed, 28 Jul 1999 05:08:28 -0700
+
+libmikmod (3.1.7-2) unstable; urgency=low
+
+  * Applied a pair of upstream patches
+
+ -- Joseph Carter <knghtbrd@debian.org>  Mon, 26 Jul 1999 04:43:38 -0700
+
+libmikmod (3.1.7-1) unstable; urgency=low
+
+  * New upstream version
+  * binary packages libmikmod2 and libmikmod2-dev are generated now
+  * source package is once again libmikmod (the rename is backwards I know)
+
+ -- Joseph Carter <knghtbrd@debian.org>  Tue,  6 Jul 1999 07:50:09 -0700
+
+libmikmod1 (3.1.6-3) unstable; urgency=low
+
+  * Standards version 3.0.0, debhelper v2
+  * Fixed a bug in porting  (Closes: #39873)  (for real this time)
+  * libmikmod.a is now in the -dev package where it belongs
+  * the -dev package is now arch: any like it belongs
+  * added the ${libcdev} thing from popt to control and rules for alpha
+  * renamed source to libmikmod1 and put packages in oldlibs
+
+ -- Joseph Carter <knghtbrd@debian.org>  Tue,  6 Jul 1999 06:49:14 -0700
+
+libmikmod (3.1.6-2) unstable; urgency=low
+
+  * It was reported that mikmod.h was in libmikmod1.  I don't see how it
+    could have been, but it's NOT anymore.  (Closes #39873)
+
+ -- Joseph Carter <knghtbrd@debian.org>  Mon, 21 Jun 1999 14:25:40 -0700
+
+libmikmod (3.1.6-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Joseph Carter <knghtbrd@debian.org>  Sun, 13 Jun 1999 15:26:40 -0700
+
+libmikmod (3.1.5-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Joseph Carter <knghtbrd@debian.org>  Tue, 25 May 1999 20:17:35 -0700

@@ -1,0 +1,28 @@
+#! /usr/bin/make -f
+
+export DH_OPTIONS		+= -O-Bbuild
+export DEB_BUILD_MAINT_OPTIONS	 = hardening=-fortify
+
+ENABLED = --disable-esd
+ENABLED += --enable-openal
+ENABLED += --enable-sdl --enable-sdl2
+# Only enable ALSA on Linux
+ifeq ($(DEB_HOST_ARCH_OS), linux)
+  ENABLED += --enable-alsa
+else
+  ENABLED += --disable-alsa
+endif
+
+include /usr/share/dpkg/pkg-info.mk
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(ENABLED)
+
+override_dh_installchangelogs-arch:
+	dh_installchangelogs -a NEWS
+
+override_dh_missing:
+	dh_missing -X.la
+
+%:
+	dh $@

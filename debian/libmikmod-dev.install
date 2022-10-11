@@ -1,0 +1,6 @@
+usr/bin/libmikmod-config
+usr/include/mikmod.h
+usr/lib/*/libmikmod.a
+usr/lib/*/libmikmod.so
+usr/lib/*/pkgconfig/libmikmod.pc
+usr/share/aclocal/
